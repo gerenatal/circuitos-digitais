@@ -74,13 +74,13 @@ begin
 	es <= enable;
 	rs <= reset;
 	
-	ds(0) <= not( (qs(2) and qs(0)) or (not qs(2) and not qs(0)) or qs(1));
-	ds(1) <= not( not qs(2) or (not qs(1) and not qs(0)) or (qs(1) and qs(0)));
-	ds(2) <= not( qs(2) or not qs(1) or qs(0));
-	ds(3) <= not( (qs(2) and not qs(1) and qs(0)) or (not qs(2) and not qs(0)) or (qs(1) and not qs(0)) or (not qs(2) and qs(1)));
-	ds(4) <= not( (not qs(2) and not qs(0)) or (qs(1) and not qs(0)));
-	ds(5) <= not( (not qs(1) and not qs(0)) or (qs(2) and not qs(0)) or (qs(2) and not qs(1)));
-	ds(6) <= not( (qs(2) xor qs(1)) or (qs(0) and (qs(2) or qs(1))));
+	ds(0) <= not((qs(2) and qs(0)) or (not qs(2) and not qs(0)) or qs(1));
+	ds(1) <= not((not qs(1) and not qs(0)) or (qs(1) and qs(0)) or not qs(2));
+	ds(2) <= not(qs(2) or not qs(1) or qs(0));
+	ds(3) <= not((qs(2) and not qs(1) and qs(0)) or (not qs(2) and not qs(0)) or (qs(1) and not qs(0)) or (not qs(2) and qs(1)));
+	ds(4) <= not((not qs(2) and not qs(0)) or (qs(1) and not qs(0)));
+	ds(5) <= not((not qs(1) and not qs(0)) or (qs(2) and not qs(0)) or (qs(2) and not qs(1)));
+	ds(6) <= not((qs(2) xor qs(1)) or (qs(2) and not qs(0)));
 	d <= ds;
 	
 end contador;
