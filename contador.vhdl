@@ -25,8 +25,6 @@ signal ks : std_logic_vector(2 downto 0);
 
 signal ja : std_logic_vector(2 downto 0);
 signal ka : std_logic_vector(2 downto 0);
-signal jb : std_logic_vector(2 downto 0);
-signal kb : std_logic_vector(2 downto 0);
 
 signal jd : std_logic_vector(2 downto 0);
 signal kd : std_logic_vector(2 downto 0);
