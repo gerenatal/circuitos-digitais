@@ -48,12 +48,12 @@ begin
 	ja(0) <= jc(0) or jd(0);
 	ka(0) <= kc(0) or kd(0);
 	
-	js(2) <= not es or ja(2); --(not es and (rs or ja(2))) or (rs xor ja(2));
-	ks(2) <= (not es and rs) or (es and ka(2)); --(not es and not rs) or (es and ka(2));
-	js(1) <= not es or ja(1); --(not es and (rs or ja(1))) or (rs xor ja(1)); --not es or ja(1);
-	ks(1) <= (not es and rs) or (es and ka(1)); --(not es and not rs) or (es and ka(1));
-	js(0) <= not es or ja(0); --(not es and (rs or ja(0))) or (rs xor ja(0)); --not es or ja(0);
-	ks(0) <= (not es and rs) or (es and ka(0)); --(not es and not rs) or (es and ka(0));
+	js(2) <= not es or ja(2);
+	ks(2) <= (not es and not rs) or (es and ka(2));
+	js(1) <= not es or ja(1);
+	ks(1) <= (not es and not rs) or (es and ka(1));
+	js(0) <= not es or ja(0);
+	ks(0) <= (not es and not rs) or (es and ka(0));
 
 	jd(2) <= qs(2) or qs(1) or qs(0);
 	kd(2) <= not qs(2) or qs(1) or qs(0);
